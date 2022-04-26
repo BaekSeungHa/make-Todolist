@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+    font-size: 60px;
+    width: 100%;
+    border: 3px solid green;
+    margin-bottom:15px;
+}
+body{
+
+    background-color:yellow; 
+    
+}
+.todoBox{
+    margin-top: 15%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+#change_btn{
+    border: 2px solid gray;
+   width:80px;
+   height: 80px;
+   background-color:yellow;
+   border-radius: 50%;
+   font-size: 50px;
+   float: right;
+   margin-right:10px;
+   color: rgb(57, 57, 57);
+}
+#delete_btn{
+    border: 2px solid gray;
+    width: 80px;
+    height: 80px;
+    background-color:rgb(131, 208, 238);
+    border-radius: 50%;
+    font-size: 20px;
+    float: right; 
+    font-weight: 900;
+    margin-right: 10px  ;
+}
+#fix_btn{
+    border: 2px solid gray;
+    width: 80px;
+    height: 80px;
+    background-color:rgb(131, 208, 238);
+    border-radius: 50%;
+    font-size: 20px;
+    float: right; 
+    font-weight: 900;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>TODO APP</h1>
+        </header>
+
+        <div>
+            <input type="text" >
+            <button id="addBtn">추가</button>
+         </div>
+        
+         <div>
+            <ul></ul>
+        </div>
+    </div>
+</body>
+    <script src="./todo.js"></script>
+</html>
