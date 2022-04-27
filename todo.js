@@ -2,6 +2,7 @@ const input = document.querySelector("input");
 const addBtn = document.querySelector("#addBtn");
 const ul = document.querySelector("ul");
 
+
 addBtn.addEventListener("click", addTodo);
 function addTodo() {
     const todo = input.value;
