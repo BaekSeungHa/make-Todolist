@@ -12,7 +12,7 @@ function addTodo() {
        todos.push(todo);
        console.log(todos);
        input.value = "";
-      //   saveTodo();
+       saveTodo();
   }
 }
 
@@ -24,7 +24,10 @@ function deleteTodo(event, delTodo) {
     todos = todos.filter((todo) => todo != delTodo);
     console.log(todos);
   
-    // saveTodo();
+    saveTodo();
+}
+function saveTodo(todo) {
+    localStorage.setItem("todoList", JSON.stringify(todos));
 }
 
 function paintTodo(todo) {
@@ -43,3 +46,10 @@ function paintTodo(todo) {
 
     ul.appendChild(li);
 }
+
+function init(){
+    todos.map((todo) => {
+        paintTodo(todo);
+    });
+};
+init()
