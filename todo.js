@@ -4,8 +4,6 @@ const ul = document.querySelector("ul");
                   //ul 태그도 불러온다
 let todos = JSON.parse(localStorage.getItem("todoList")) || []; //변수 선언  storage에 저장된 것을 가져온다. todolist를 JSON parse가 문자열 분석하고 그 결과에서 객체 생성
 
-addBtn.addEventListener("click", addTodo);
-
 let today = new Date();   
 let year = today.getFullYear(); 
 let month = today.getMonth() + 1; 
@@ -13,24 +11,28 @@ let date = today.getDate();
 
 document.getElementById("date").innerText = '' + year + '년 ' + month + '월 ' + date + '일';
 
+addBtn.addEventListener("click", addTodo);
+
 function addTodo() { //addTodo 라는 함수 생성
-    console.log(input.value);
+    console.log(input.value); 
     const todo = input.value; 
     if (todo) { //if를 사용하지 않으면 비문자열이 들어감
         paintTodo(todo); //paintTodo 실행
         todos.push(todo); //배열에 넣어주고
         console.log(todos); //출력 해준다
-        input.value = "";//리셋 해주는거 input 값을
+        input.value = "";//input 값을 리셋
         saveTodo();
   } 
 }
+function checkTodo(event, checkToDo) {
 
+}
 function deleteTodo(event, delTodo) {   //
     const btn = event.target;  //이벤트가 실행될곳을 가져온다 가르킨다
-    const li = btn.parentNode; //이렇게 삭제한 노드의 반환값을 다른 노드에 붙여서 노드의 위치를 이동하는 작업에 사용할 수 있습니다.
+    const li = btn.parentNode; //이렇게 삭제한 노드의 반환값을 다른 노드에 붙여서 노드의 위치를 이동하는 작업에 사용 할 수 있다.
     ul.removeChild(li); // 부모 자식 관계를 끊는다
   
-    todos = todos.filter((todo) => todo != delTodo); //todos가 배열 배열안에 투두 있다 배열을 하나 하나씩 연산을해서 델투둔지 아닌면 리턴 투두면 투두스에 저장 펄스면 저장안됨투두랑 델투두가 다르면  투두인것들은 투두스에 저장
+    todos = todos.filter((todo) => todo != delTodo); //todos가 배열 안에 있다 배열을 하나 하나씩 연산을해서 델투둔지 확인 아니면 리턴 투두면 투두스에 저장 false면 저장안됨투두랑 델투두가 다르면  투두인것들은 투두스에 저장
     console.log(todos); 
 
     saveTodo();
@@ -45,16 +47,19 @@ function paintTodo(todo) {
     const span = document.createElement("span");        
     const delBtn = document.createElement("button"); 
  
-    span.innerText = todo; //
-    delBtn.innerText = "❌"; //
-     
+    span.innerText = todo; 
+    delBtn.innerText = "❌";
+    checkBtn.innerText = "💦"; 
     li.appendChild(span); //자식 맺기 
     li.appendChild(delBtn); //
     delBtn.addEventListener("click", (event) => { //클릭했을때 deleteTodo 실행
     deleteTodo(event, todo);
     });
+    checkBtn.addEventListener("click", (event) => {
+    checkTodo(event, todo);
+    });
 
-    ul.appendChild(li);
+    ul.appendChild(li); 
 }
 
 function init(){
