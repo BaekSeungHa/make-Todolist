@@ -1,0 +1,35 @@
+header{
+    font-size: 50px;
+    width: 100%;
+    border: 10px solid white;
+    margin-bottom:15px;
+    
+}
+div { 
+    text-align: center;
+    }
+
+ 
+body{
+    background-color:beige; 
+}
+
+input{
+    width: 30%;
+    height: 50px;
+    font-size: 30px;
+}
+button{
+    color: black;
+    background-color:skyblue; 
+    border: 1px solid gray; 
+    padding: 10px 24px;
+}
+.li{
+    padding-left: 22px;
+    font-size: 0.9375em;
+    line-height: 1.6;
+    color: #666; 
+    list-style: inherit; 
+    text-indent: -22px;
+}

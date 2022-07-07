@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-
 header{
-    font-size: 50px;
-    width: 100%;
-    border: 10px solid white;
-    margin-bottom:15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 40px;
+    color: black;
+    text-shadow: -11px 7px 4px rgba(0, 0, 0, 0.1);
     
+}
+h1 {
+    font-family: 'Inter';
+    font-style: normal;
 }
 div { 
     text-align: center;
@@ -21,19 +24,35 @@ div {
 
  
 body{
-    background-color:beige; 
+    background: #C9DFFF;; 
+}
+
+.date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 50px;
+    color: black;
+    text-shadow: -9px 7px 4px rgba(0, 0, 0, 0.1);
 }
 
 input{
-    width: 30%;
-    height: 50px;
-    font-size: 30px;
+    width: 527px;
+    height: 42px;
+    left: 440px;
+    top: 450px;
+    font-size: 10px;
+
+    background: beige;
+    box-shadow: -11px 14px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
 }
 button{
-    color: black;
-    background-color:skyblue; 
-    border: 1px solid gray; 
-    padding: 10px 24px;
+    width: 76px;
+    height: 42px;
+
+    background: white;
+    box-shadow: -11px 14px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 32px;
 }
 .li{
     padding-left: 22px;
@@ -43,23 +62,27 @@ button{
     list-style: inherit; 
     text-indent: -22px;
 }
-
+ul {
+    list-style: none;
+}
   </style>
 </head>
 <body>
-    <div class="container">
+    <div id="date" class="date"> </div>
+      <div class="container">
         <header>
             <h1>TODO APP</h1>
         </header>
-
+        <form>
         <div>
-            <input type="text" >
-            <button id="addBtn">추가</button>
+            <input type="text" placeholder="ADD TO DO">
+            <button id="addBtn">추가</button>   
          </div>
-        
-         <div>
+        </form>
+         <div class="todolist">
             <ul></ul>
         </div>
+        <a id="clear">모두 삭제</a>
     </div>
 </body>
     <script src="./todo.js"></script>
