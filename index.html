@@ -18,6 +18,16 @@ h1 {
     font-family: 'Inter';
     font-style: normal;
 }
+
+.check {
+    width: 20px;
+    height: 20px;
+}
+
+.listElement {
+    margin-right: auto;
+}
+
 div { 
     text-align: center;
     }
@@ -35,25 +45,36 @@ body{
     text-shadow: -9px 7px 4px rgba(0, 0, 0, 0.1);
 }
 
-input{
+#title-input{
     width: 527px;
     height: 42px;
     left: 440px;
     top: 450px;
-    font-size: 10px;
+    font-size: 15px;
+    padding: 5px 25px;
 
     background: beige;
     box-shadow: -11px 14px 4px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
 }
 button{
-    width: 76px;
+    width: 75px;
     height: 42px;
 
     background: white;
-    box-shadow: -11px 14px 4px rgba(0, 0, 0, 0.1);
     border-radius: 32px;
 }
+
+.del-btn {
+    width: 30px;
+    height: 30px;
+
+    font-size: 10px;
+
+    background: white;
+    border-radius: 15px;
+}
+
 .li{
     padding-left: 22px;
     font-size: 0.9375em;
@@ -75,14 +96,14 @@ ul {
         </header>
         <form>
         <div>
-            <input type="text" placeholder="ADD TO DO">
+            <input id="title-input" type="text" placeholder="ADD TO DO">
             <button id="addBtn">추가</button>   
          </div>
         </form>
-         <div class="todolist">
+        <div class="todolist">
             <ul></ul>
         </div>
-        <a id="clear">모두 삭제</a>
+        <div></div>
     </div>
 </body>
     <script src="./todo.js"></script>

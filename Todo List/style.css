@@ -1,0 +1,39 @@
+body {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  width: 985px;
+  height: 763px;
+  left: 113px;
+  top: 97px;
+
+  background: #c9dfff;
+  border-radius: 68px;
+}
+
+#date {
+  position: absolute;
+  width: 558px;
+  height: 103px;
+  left: 190px;
+  top: 163px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 85px;
+  line-height: 103px;
+  /* identical to box height */
+
+  color: #ffffff;
+
+  text-shadow: -9px 7px 4px rgba(0, 0, 0, 0.1);
+}
+
+.today {
+  position: absolute;
+  left: 167px;
+  top: 117px;
+}
